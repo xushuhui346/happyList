@@ -1,31 +1,19 @@
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-var _lodash = require("lodash");
+var _ = _interopDefault(require('lodash'));
 
-var _lodash2 = _interopRequireDefault(_lodash);
+let config = {};
+// 开发环境
+// 线上环境
+{
+    const localConfig = {
+        port :8081
+    };
+    config = _.extend(config,localConfig);
+}
+// console.log(`config:${config.port}`)
+var config$1 = config
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-let config = {}; // 开发环境
-
-if (process.env.NODE_ENV === 'development') {
-  const localConfig = {
-    port: 8081
-  };
-  config = _lodash2.default.extend(config, localConfig);
-} // 线上环境
-
-
-if (process.env.NODE_ENV === 'production') {
-  const localConfig = {
-    port: 8081
-  };
-  config = _lodash2.default.extend(config, localConfig);
-} // console.log(`config:${config.port}`)
-
-
-exports.default = config;
+module.exports = config$1;

@@ -5,6 +5,7 @@ const rollup = require('gulp-rollup')
 const replace = require('rollup-plugin-replace')
 
 gulp.task('builddev', () =>{
+    // 实时监听
     return watch('./src/nodelayer/**/*.js',{
         ignoreInitial:false
     },()=>{
@@ -18,7 +19,7 @@ gulp.task('builddev', () =>{
 });
 
 gulp.task('buildprod', () =>{
-        gulp.src('src/nodelayer/**/*.js')
+        gulp.src(['src/nodelayer/**/*.js','!./src/nodelayer/config/index.js'])
         .pipe(babel({
             babelrc:false,
             'plugins':['transform-es2015-modules-commonjs']
@@ -28,6 +29,7 @@ gulp.task('buildprod', () =>{
 
 gulp.task('buildconfig', () =>{
     gulp.src('src/nodelayer/config/*.js')
+    // tree shaking 优化
     .pipe(rollup({
         format:'cjs',
         input:'./src/nodelayer/config/index.js',
@@ -41,12 +43,9 @@ gulp.task('buildconfig', () =>{
 });
 
 let _task = ['builddev']
-// 上线
+// 上线  需tree shaking  优化
 if(process.env.NODE_ENV ==='production'){
-    _task = ['buildprod']
+    _task = ['buildprod','buildconfig']
 }
-// 上线代码优化
-if(process.env.NODE_ENV ==='config'){
-    _task = ['buildconfig']
-}
+
 gulp.task('default', _task);
