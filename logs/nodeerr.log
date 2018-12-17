@@ -1,1 +1,31 @@
 [2018-12-15T20:59:16.010] [ERROR] nodeerr - 页面丢失了。
+[2018-12-17T11:57:01.555] [ERROR] nodeerr - 页面丢失了。
+[2018-12-17T11:57:01.913] [ERROR] nodeerr - 页面丢失了。
+[2018-12-17T14:26:27.345] [ERROR] nodeerr - Error: Unexpected end of tag " block" on line 2 in file /Users/hui/Desktop/happyList/build/views/index.html.
+    at Object.exports.throwError (/Users/hui/Desktop/happyList/node_modules/_swig-templates@2.0.3@swig-templates/lib/utils.js:188:9)
+    at parseTag (/Users/hui/Desktop/happyList/node_modules/_swig-templates@2.0.3@swig-templates/lib/parser.js:659:15)
+    at /Users/hui/Desktop/happyList/node_modules/_swig-templates@2.0.3@swig-templates/lib/parser.js:778:15
+    at Object.exports.each (/Users/hui/Desktop/happyList/node_modules/_swig-templates@2.0.3@swig-templates/lib/utils.js:45:11)
+    at Object.exports.parse (/Users/hui/Desktop/happyList/node_modules/_swig-templates@2.0.3@swig-templates/lib/parser.js:755:9)
+    at exports.Swig.parse (/Users/hui/Desktop/happyList/node_modules/_swig-templates@2.0.3@swig-templates/lib/swig.js:383:19)
+    at exports.Swig.precompile (/Users/hui/Desktop/happyList/node_modules/_swig-templates@2.0.3@swig-templates/lib/swig.js:526:23)
+    at exports.Swig.compile (/Users/hui/Desktop/happyList/node_modules/_swig-templates@2.0.3@swig-templates/lib/swig.js:651:16)
+    at /Users/hui/Desktop/happyList/node_modules/_swig-templates@2.0.3@swig-templates/lib/swig.js:729:27
+    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)
+[2018-12-17T14:30:30.413] [ERROR] nodeerr - { [Error: ENOENT: no such file or directory, open '/Users/hui/Desktop/happyList/build/views/index1.html']
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hui/Desktop/happyList/build/views/index1.html' }
+[2018-12-17T14:30:33.238] [ERROR] nodeerr - 页面丢失了。
+[2018-12-17T14:30:36.695] [ERROR] nodeerr - 页面丢失了。
+[2018-12-17T14:30:43.046] [ERROR] nodeerr - { [Error: ENOENT: no such file or directory, open '/Users/hui/Desktop/happyList/build/views/index1.html']
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hui/Desktop/happyList/build/views/index1.html' }
+[2018-12-17T14:31:48.934] [ERROR] nodeerr - { [Error: ENOENT: no such file or directory, open '/Users/hui/Desktop/happyList/build/views/index1.html']
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/hui/Desktop/happyList/build/views/index1.html' }
