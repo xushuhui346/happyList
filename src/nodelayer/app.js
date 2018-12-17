@@ -37,3 +37,4 @@ controllerInit.getAllrouters(app,router)
 app.listen(config.port,()=>{
     console.log(`happylist listening on ${config.port}`)
 });
+module.exports = app;

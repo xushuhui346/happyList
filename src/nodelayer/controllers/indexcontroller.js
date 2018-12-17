@@ -7,6 +7,13 @@ const indexController = {
             //  'index'  实际就是打开 index.html
             ctx.body = await ctx.render('index',{data:result})  
         }
+    },
+    testAction(){
+        return (ctx,next)=>{
+            ctx.body = {
+                data:'hello test'
+            }
+        }
     }
 }
 export default indexController

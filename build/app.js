@@ -76,3 +76,4 @@ _controllerinit2.default.getAllrouters(app, _koaSimpleRouter2.default);
 app.listen(_config2.default.port, () => {
   console.log(`happylist listening on ${_config2.default.port}`);
 });
+module.exports = app;

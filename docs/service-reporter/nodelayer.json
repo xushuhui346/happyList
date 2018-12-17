@@ -1,0 +1,136 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-12-17T09:29:48.103Z",
+    "end": "2018-12-17T09:29:48.150Z",
+    "duration": 47,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "6263f7d2-f47e-403c-bcfc-3e6d89394be1",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "4f92ff9d-cd8c-40b5-939f-e7ea3cf47831",
+        "title": "nodelayer自动化测试脚本",
+        "fullFile": "/Users/hui/Desktop/happyList/tests/service/router.spec.js",
+        "file": "/tests/service/router.spec.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [],
+        "suites": [
+          {
+            "uuid": "6528be91-a5e3-4197-a993-812ac8271947",
+            "title": "api接口测试",
+            "fullFile": "/Users/hui/Desktop/happyList/tests/service/router.spec.js",
+            "file": "/tests/service/router.spec.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "获取测试的数据",
+                "fullTitle": "nodelayer自动化测试脚本 api接口测试 获取测试的数据",
+                "timedOut": false,
+                "duration": 31,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "request()\n    .get('/index/test')\n    .set('Accept','application/json')\n    .expect('Content-Type', /json/)\n    .expect(200)\n    .end(function(err,response){\n        if(response.body.data==='hello test'){\n            done();\n        }else{\n            done(new Error('测试接口与期望数据不符合:'+err))\n        }\n    })",
+                "err": {},
+                "isRoot": false,
+                "uuid": "e1a367db-b86c-45c2-9785-1782f5a61d3d",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "e1a367db-b86c-45c2-9785-1782f5a61d3d"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 31,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          },
+          {
+            "uuid": "b3734598-4dc3-4796-94b9-9dbab20c8cbf",
+            "title": "nodelayer容错测试",
+            "fullFile": "/Users/hui/Desktop/happyList/tests/service/router.spec.js",
+            "file": "/tests/service/router.spec.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "测试404脚本容错http code",
+                "fullTitle": "nodelayer自动化测试脚本 nodelayer容错测试 测试404脚本容错http code",
+                "timedOut": false,
+                "duration": 6,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "request()\n// 不存在的路由，测试404\n.get('/message/notfound')\n.expect(404,done);",
+                "err": {},
+                "isRoot": false,
+                "uuid": "53ac44f3-b3d8-4bc7-bc88-df1ee24b0184",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "53ac44f3-b3d8-4bc7-bc88-df1ee24b0184"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 6,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}

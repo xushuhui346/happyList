@@ -20,6 +20,14 @@ const indexController = {
         data: result
       });
     };
+  },
+
+  testAction() {
+    return (ctx, next) => {
+      ctx.body = {
+        data: 'hello test'
+      };
+    };
   }
 
 };

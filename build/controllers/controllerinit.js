@@ -14,6 +14,8 @@ const controllerInit = {
   getAllrouters(app, router) {
     app.use(router(_ => {
       _.get('/index', _indexcontroller2.default.indexAction());
+
+      _.get('/index/test', _indexcontroller2.default.testAction());
     }));
   }
 
